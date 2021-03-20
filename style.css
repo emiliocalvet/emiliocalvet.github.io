@@ -10,7 +10,6 @@ html, body {
 }
 
 header {
-  margin-bottom: 50px;
   padding-bottom: 40px;
   color: white;
   border-bottom-left-radius: 20px;
@@ -81,9 +80,9 @@ header #social-media .social-logo img {
 }
 
 #container {
-  margin: 80px auto 0;
+  margin: 0 auto;
+  padding: 20px 0;
   width: 80%;
-  background-color: white;
 }
 
 #container .content-block {
@@ -96,4 +95,7 @@ header #social-media .social-logo img {
 
 footer {
   height: 50px;
+  background-color: black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }

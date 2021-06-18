@@ -62,20 +62,17 @@ header #social-media {
   padding: 10px;
   display: flex;
   flex-direction: row;
-  width: fit-content;
+  width: 300px;
 }
 
-header #social-media .social-logo:first-child img {
-  margin-left: 0;
+header #social-media .social-logo-container {
+  margin: 0 auto;
 }
 
-header #social-media .social-logo:last-child img {
-  margin-right: 0;
-}
 
 header #social-media .social-logo img {
   padding: 12px;
-  margin: 0 20px;
+  margin: 0;
   height: 28px;
   width: 28px;
   border: 1px solid white;
@@ -86,7 +83,6 @@ header #social-media .social-logo img:hover {
   padding: 9px;
   height: 34px;
   width: 34px;
-  border: 1px solid white;
 }
 
 #container {
@@ -108,4 +104,10 @@ footer {
   background-color: black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+@media (min-width: 600px) {
+  header #social-media {
+    width: 430px;
+  }
 }

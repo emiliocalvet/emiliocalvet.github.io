@@ -74,9 +74,19 @@ header #social-media .social-logo:last-child img {
 }
 
 header #social-media .social-logo img {
+  padding: 12px;
   margin: 0 20px;
   height: 28px;
   width: 28px;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+header #social-media .social-logo img:hover {
+  padding: 9px;
+  height: 34px;
+  width: 34px;
+  border: 1px solid white;
 }
 
 #container {

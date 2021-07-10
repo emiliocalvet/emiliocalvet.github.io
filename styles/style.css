@@ -19,7 +19,7 @@ header {
 }
 
 header #banner {
-  background-image: url("./images/banner.png");
+  background-image: url("./../images/banner.png");
   background-size: cover;
   background-position: center;
   border-bottom-left-radius: 20px;

@@ -22,11 +22,11 @@ Deploy = `git push` para `master`. Cuidado ao alterar `index.html` ou `styles/st
 
 ## Arquitetura e convenções
 
-- **Página única**: `index.html` é a estrutura, `styles/style.css` é todo o estilo. Não fragmente em múltiplos arquivos sem necessidade clara.
-- **Layout do `index.html`**: `header` (banner com `.perfil-photo`, `#perfil-label` com nome/cargo, `#social-media` com links) → `#container` com vários `div.content-block` (seções "Sobre", "Detalhes Pessoais", "Interesses", "Habilidades") → `footer`. Cada seção nova segue o padrão `<div id="..." class="content-block"><h2>...</h2>...</div>`.
-- **CSS por seletores de ID + combinadores descendentes** (ex.: `header #social-media .social-logo img`), não BEM nem classes utilitárias. Mantenha esse estilo ao adicionar regras.
-- **Tema**: preto/branco, cantos arredondados (`border-radius`), fonte Google `Blinker`. Responsividade via `@media (min-width: 600px)`.
-- **Nomenclatura mista PT/EN** já existente no código (`perfil-photo`, `techs-logo`, `social-logo`). Acompanhe o padrão local em vez de padronizar tudo.
+- **Página única**: `index.html` é a estrutura, `styles/style.css` é todo o estilo. Não fragmente sem necessidade clara.
+- **Layout do `index.html`**: `header.hero` (foto, `h1.hero__name`, subtítulo, `nav.social`, botão `.btn` de currículo) → `main` com `section.section` (`.about`, `.stack`, `.contact`) → `footer.footer`. Cada bloco do stack é um `.stack-group` com `.tech-grid` de `.tech` (logo + label) ou `.tech--text` (só texto, para techs sem logo).
+- **CSS por classes (estilo BEM-ish)**: `.hero`, `.section`, `.label`, `.btn`/`.btn--light`/`.btn--dark`, `.social`, `.tech`/`.tech--text`, `.chip`, `.stack-group`. Variáveis em `:root` (`--ink`, `--bg`, `--border`, `--radius`, `--maxw`...). Acrescente novas regras ao fim do arquivo seguindo esse padrão.
+- **Tema**: preto/branco, cantos arredondados (`border-radius`), fonte Google `Blinker`. Mobile via `@media (max-width: 480px)`; o nome usa `clamp()` para escalar.
+- **Logos do stack**: SVG monocromáticos (`#0a0a0a`) em `images/techs-logos/`, do Simple Icons. Techs sem ícone (Java, AWS, pfSense, Loki, SonarQube, Zabbix) entram como `.tech--text`.
 
 ## Assets
 

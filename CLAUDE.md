@@ -30,12 +30,15 @@ Deploy = `git push` para `master`. Cuidado ao alterar `index.html` ou `styles/st
 
 ## Assets
 
-- `images/` — `banner.png` (fundo do header), `perfil-8bit.png` (foto de perfil, referenciada em `index.html`), e `images/techs-logos/` com logos de tecnologias e redes sociais (`react-logo.png`, `nodejs-logo.png`, `aws-logo.png`, `github-logo.png`, etc.). Novos logos vão em `techs-logos/` seguindo o sufixo `-logo.png`.
-- `curriculo_emilio_calvet_final.pdf` na raiz — currículo; fonte de informações de carreira para preencher o conteúdo do site.
+- `images/perfil.jpg` — foto de perfil otimizada (usada no header hero).
+- `images/favicon.svg` — favicon monograma "EC".
+- `images/social/` — ícones sociais SVG monocromáticos: github, linkedin, whatsapp, telegram, email.
+- `images/techs-logos/` — logos SVG monocromáticos do stack técnico.
+- `files/curriculo-emilio-calvet.pdf` — currículo, alvo do botão de download (movido da raiz).
 
 ## Estado atual
 
-As seções de `#container` ainda contêm **placeholder Lorem ipsum** (`#about`, `#personal-details`, `#my-interest`, `#skills`) — conteúdo real ainda não foi escrito. O objetivo do projeto é transformar isso numa página profissional (tech lead / dev fullstack) preservando o estilo visual já iniciado.
+Página implementada como cartão de visitas técnico (estilo minimalista P&B): topo (foto, nome, título, sociais, CTA de currículo), Sobre, Stack técnico (logos monocromáticos + chips) e Contato. Conteúdo real, sem placeholders. Design e plano documentados em `docs/superpowers/`.
 
 ## Formatação (.editorconfig)
 

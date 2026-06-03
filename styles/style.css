@@ -256,3 +256,37 @@ a {
   color: var(--ink);
   font-weight: 700;
 }
+
+/* Contato */
+.contact {
+  text-align: center;
+}
+
+.contact__email {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 2px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.contact__cta {
+  margin-bottom: 8px;
+}
+
+.contact .social {
+  margin-top: 18px;
+}
+
+/* Footer */
+.footer {
+  background: #0a0a0a;
+  color: #aaaaaa;
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}

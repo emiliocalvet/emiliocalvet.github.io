@@ -173,3 +173,27 @@ a {
 .hero .social img {
   filter: invert(1);
 }
+
+/* Sobre */
+.about__text {
+  font-size: 16px;
+  line-height: 1.65;
+  color: #333333;
+}
+
+/* Chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.chip {
+  font-size: 13px;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: #222222;
+  padding: 6px 12px;
+  border-radius: 999px;
+}

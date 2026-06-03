@@ -290,3 +290,18 @@ a {
   border-top-left-radius: var(--radius-lg);
   border-top-right-radius: var(--radius-lg);
 }
+
+/* Ajustes mobile */
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 18px;
+  }
+
+  .hero {
+    padding: 40px 18px 32px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  }
+}

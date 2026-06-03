@@ -55,7 +55,7 @@ A verificação é **visual + checagem de assets** (não há test runner, por de
 | `images/banner.png` | Banner antigo, não mais usado | Remover |
 | `images/perfil-8bit.png` | Avatar antigo, substituído | Remover |
 | `32288E49-...png` (raiz) | Foto-fonte original | Remover após otimizar |
-| `curriculo_emilio_calvet_final.pdf` | Alvo do botão de download | Versionar (git add) |
+| `files/curriculo-emilio-calvet.pdf` | Alvo do botão de download (movido da raiz para organizar) | Versionar (git add) |
 
 ---
 
@@ -400,7 +400,7 @@ Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
       </a>
     </nav>
 
-    <a class="btn btn--light" href="./curriculo_emilio_calvet_final.pdf" download>
+    <a class="btn btn--light" href="./files/curriculo-emilio-calvet.pdf" download>
       ↓ Baixar currículo (PDF)
     </a>
 ```
@@ -547,7 +547,7 @@ Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
 
 ## Task 6: Seção Stack técnico
 
-Grade de logos monocromáticos agrupados + grupo final em chips. Tiles **com ícone**: `<div class="tech"><img...><span>Nome</span></div>`. Tiles **só texto** (sem logo no Simple Icons — Java, AWS, pfSense, Loki): `<div class="tech tech--text"><span>Nome</span></div>`. Se algum download do Task 2 tiver falhado, converter aquele tile para `tech--text`.
+Grade de logos monocromáticos agrupados + grupo final em chips. Tiles **com ícone**: `<div class="tech"><img...><span>Nome</span></div>`. Tiles **só texto** (sem logo no Simple Icons — Java, AWS, pfSense, Loki, SonarQube, Zabbix): `<div class="tech tech--text"><span>Nome</span></div>`. Se algum download do Task 2 tiver falhado, converter aquele tile para `tech--text`.
 
 **Files:**
 - Modify: `index.html` (substituir `<!-- STACK_CONTENT -->`)
@@ -619,7 +619,7 @@ Grade de logos monocromáticos agrupados + grupo final em chips. Tiles **com íc
         <div class="tech"><img src="./images/techs-logos/caddy.svg" alt="Caddy"><span>Caddy</span></div>
         <div class="tech"><img src="./images/techs-logos/traefikproxy.svg" alt="Traefik"><span>Traefik</span></div>
         <div class="tech tech--text"><span>pfSense</span></div>
-        <div class="tech"><img src="./images/techs-logos/sonarqube.svg" alt="SonarQube"><span>SonarQube</span></div>
+        <div class="tech tech--text"><span>SonarQube</span></div>
       </div>
     </div>
 
@@ -629,7 +629,7 @@ Grade de logos monocromáticos agrupados + grupo final em chips. Tiles **com íc
         <div class="tech"><img src="./images/techs-logos/grafana.svg" alt="Grafana"><span>Grafana</span></div>
         <div class="tech"><img src="./images/techs-logos/prometheus.svg" alt="Prometheus"><span>Prometheus</span></div>
         <div class="tech tech--text"><span>Loki</span></div>
-        <div class="tech"><img src="./images/techs-logos/zabbix.svg" alt="Zabbix"><span>Zabbix</span></div>
+        <div class="tech tech--text"><span>Zabbix</span></div>
       </div>
     </div>
 
@@ -744,7 +744,7 @@ Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
     <h2>Vamos conversar</h2>
     <a class="contact__email" href="mailto:emiliocalvet@gmail.com">emiliocalvet@gmail.com</a>
     <div class="contact__cta">
-      <a class="btn btn--dark" href="./curriculo_emilio_calvet_final.pdf" download>↓ Baixar currículo (PDF)</a>
+      <a class="btn btn--dark" href="./files/curriculo-emilio-calvet.pdf" download>↓ Baixar currículo (PDF)</a>
     </div>
     <nav class="social" aria-label="Redes sociais">
       <a href="https://github.com/emiliocalvet" target="_blank" rel="noopener" aria-label="GitHub">
@@ -813,7 +813,7 @@ Recarregar. Esperado: seção "Contato" centralizada com e-mail sublinhado clic�
 - [ ] **Step 5: Commit (incluindo o PDF do currículo)**
 
 ```bash
-git add index.html styles/style.css curriculo_emilio_calvet_final.pdf
+git add index.html styles/style.css files/curriculo-emilio-calvet.pdf
 git commit -m "feat: secao Contato, footer e versiona curriculo PDF
 
 Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
@@ -915,9 +915,15 @@ git commit -m "docs: atualiza CLAUDE.md com o estado real da pagina
 Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
 ```
 
-- [ ] **Step 4: Entregar para revisão do usuário (NÃO fazer push)**
+- [ ] **Step 4: Publicar no GitHub Pages (autorizado pelo usuário)**
 
-Parar o servidor local. Avisar o usuário que a página está pronta localmente, listar os commits feitos (`git log --oneline`) e **pedir que ele rode/abra a página e aprove antes do `git push`** (push = publicação no GitHub Pages).
+Parar o servidor local. O usuário autorizou o push ao final. Executar:
+
+```bash
+git push origin master
+```
+
+GitHub Pages publica automaticamente a partir da `master` (repositório `emiliocalvet.github.io`). Avisar o usuário que está no ar em `https://emiliocalvet.github.io` (a propagação leva ~1 min) e listar os commits enviados (`git log --oneline`).
 
 ---
 
